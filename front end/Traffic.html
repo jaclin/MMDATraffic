@@ -6,26 +6,40 @@
 	<script src="http://d3js.org/d3.v3.js"></script>
 </head>
 <body>
-	<div id = "lines">
-		<ul>
-			<li class = "linesLabel"><button class = "button">EDSA</button></li>
-			<li class = "linesLabel"><button class = "button">Commonwealth</button></li>
-			<li class = "linesLabel"><button class = "button">Quezon Avenue</button></li>
-			<li class = "linesLabel"><button class = "button">España</button></li>
-			<li class = "linesLabel"><button class = "button">C5</button></li>
-			<li class = "linesLabel"><button class = "button">Ortigas</button></li>
-			<li class = "linesLabel"><button class = "button">Marcos Highway</button></li>
-			<li class = "linesLabel"><button class = "button">Roxas Boulevard</button></li>
-			<li class = "linesLabel"><button class = "button">SLEX</button></li>
-		</ul>
-	</div>
-	<div id = "stations">
-		<ul>
-			<li class = "stationLabel">Ateneo de Manila University</li>
-			<li class = "stationLabel">hi</li>
-			<li class = "stationLabel">hi</li>
-			<li class = "stationLabel">hi</li>
-		</ul>
+	<div id = "menu">
+		 <form class = MenuBar>
+		 	<select class = Month>
+		 		<option>July 2014</option>
+		 		<option>August 2014</option>
+		 		<option>September 2014</option>
+		 		<option>October 2014</option>
+		 		<option>November 2014</option>
+		 		<option>December 2014</option>
+		 		<option>January 2015</option>
+		 		<option>February 2015</option>
+		 	</select>
+
+		 	<select class = lines>
+		 		<option>EDSA</option>
+		 		<option>Commonwealth</option>
+		 		<option>Quezon Avenue</option>
+		 		<option>España</option>
+		 		<option>C5</option>
+		 		<option>Ortigas</option>
+		 		<option>Marcos Highway</option>
+		 		<option>Roxas Boulevard</option>
+		 		<option>SLEX</option>
+		 	</select>
+		 	
+		 	<select class = stations>
+		 		<option>University of the Philippines</option>
+		 	</select>
+		 	
+		 	<select class = direction>
+		 		<option>North Bound</option>
+		 		<option>South Bound</option>
+		 	</select>
+		 </form> 
 	</div>
 	<div id = "dayLabel">
 		<ul>
@@ -50,11 +64,11 @@
 	</div>
 	<div id = "legendLabel">
 		<ul>
-			<li class = "label">1</li>
-			<li class = "label">≥ 1.4</li>
-			<li class = "label">≥ 1.8</li>
-			<li class = "label">≥ 2.2</li>
-			<li class = "label">≥ 2.6</li>
+			<li class = "label">0</li>
+			<li class = "label">≥ 0.4</li>
+			<li class = "label">≥ 0.8</li>
+			<li class = "label">≥ 1.2</li>
+			<li class = "label">≥ 1.6</li>
 		</ul>
 	</div>
 

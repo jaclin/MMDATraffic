@@ -6,20 +6,7 @@ Created on Thu Jan 29 16:52:48 2015
 """
 
 import pandas as pd
-
-
-'''
-What we need:
-Month
-	7 days
-	per station/line
-	average per half hour
-
-Output:
-    day:
-    hour: 2-digit hour, 1-digit half-hour
-    value: 0 - 2
-'''
+import pyprind
 
 df = pd.read_csv("/home/hadrian/Desktop/MMDA Traffic /back end/data/01-24/01-24.csv")
 
@@ -39,14 +26,22 @@ def cleanFilterData(data=df, year=2014, month=8, line=0, station=0, bound=0):
     # North or Southbound status
     if bound == 0:
         result = result.statusN.mean().reset_index()
-        result.rename(columns={'day_name':'day', 'statusN':'value'}, inplace=True)    
+        result.rename(columns={'day_name':'day', 'statusN':'status'}, inplace=True)    
     else:
         result = result.statusS.mean().reset_index()
-        result.rename(columns={'day_name':'day', 'statusS':'value'}, inplace=True)    
+        result.rename(columns={'day_name':'day', 'statusS':'status'}, inplace=True)    
     # Format hour for Front end
     result.hour = result.hour.map(str) + result.half.map(str)
     result.hour = result.hour.map(int)
-    result.day_name = result.day.map(int)
-    # Drop unnecessary column    
+    result.day_name = result.day.map(int)    
+    # Drop unnecessary column        
     result = result.drop(['half'],1)
     return result
+#n = 1
+#bar = pyprind.ProgPercent(n, monitor=True)
+#for i in range(n):  
+#    # do some computation
+#    df = pd.read_csv("/home/hadrian/Desktop/MMDA Traffic /back end/data/01-24/01-24.csv")
+#    cleanFilterData()        
+#    bar.update()           # 2) update the progress visualization
+#print(bar)
