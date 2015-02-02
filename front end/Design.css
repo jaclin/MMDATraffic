@@ -13,6 +13,23 @@ body, html{
 	background-color: #666666;
 	padding-left: 10;
 }
+.MenuBar button{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: #666666 no-repeat 95% center;
+	width: 100px;
+	height: 40;
+	text-indent: 0.01px
+	text-overflow: "";
+	color: #FFFFFF;
+	font-size: 14pt;
+	float: left;
+	border-top: 0;
+	border-bottom: 0;
+	border-left: 0;
+	padding-left: 10;
+
+}
 
 .MenuBar select{
 	-webkit-appearance: none;

@@ -10,7 +10,7 @@ api = restful.Api(app)
 cors = CORS(app)
 
 
-df = pd.read_csv("/home/hadrian/Desktop/MMDA Traffic /back end/data/01-24/01-24.csv")
+df = pd.read_csv("../data/01-24/01-24.csv")
 
 def cleanFilterData(data=df, year=2014, month=8, line=0, station=0, bound=0):
     # Function to determine whether time is on the 1st/2nd half of the hour    
@@ -51,7 +51,17 @@ class HelloWorld(restful.Resource):
 	 
 	    return Response(output.getvalue(), mimetype="text/csv")
 
+class Hello(restful.Resource):
+    @app.route('/<int:year>/<int:month>/<int:lineID>/<int:stationID>/<int:bound>')
+    def get(year,month,lineID,stationID,bound):
+        output = StringIO.StringIO()
+        b = cleanFilterData(df, year, month, lineID, stationID, bound)
+        b.to_json(output, orient='records')
+        return Response(output.getvalue(), mimetype="text/csv")
+
+
 api.add_resource(HelloWorld, '/')
+api.add_resource(Hello, '/?/<int:year>/<int:month>/<int:lineID>/<int:stationID>/<int:bound>')
 
 if __name__ == '__main__':
     app.run(debug=True)

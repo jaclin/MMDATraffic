@@ -3,23 +3,25 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="Design.css">
-	<script src="http://d3js.org/d3.v3.js"></script>
+	<script src="d3.v3.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
 </head>
 <body>
-	<div id = "menu">
-		 <form class = MenuBar>
-		 	<select class = Month>
-		 		<option>July 2014</option>
-		 		<option>August 2014</option>
-		 		<option>September 2014</option>
-		 		<option>October 2014</option>
-		 		<option>November 2014</option>
-		 		<option>December 2014</option>
-		 		<option>January 2015</option>
-		 		<option>February 2015</option>
+	<div onclick="click()" id = "menu">
+		 <form class = "MenuBar">
+		 	<select class = "Month" name = "Month" onchange="this.form.submit();" >
+		 		<option value = "2014/07">July 2014</option>
+		 		<option value = "2014/08">August 2014</option>
+		 		<option value = "2014/09">September 2014</option>
+		 		<option value = "2014/10">October 2014</option>
+		 		<option value = "2014/11">November 2014</option>
+		 		<option value = "2014/12">December 2014</option>
+		 		<option value = "2015/01">January 2015</option>
+		 		<option value = "2015/02">February 2015</option>
+		 		
 		 	</select>
 
-		 	<select class = lines>
+		 	<select class = "lines">
 		 		<option>EDSA</option>
 		 		<option>Commonwealth</option>
 		 		<option>Quezon Avenue</option>
@@ -31,11 +33,11 @@
 		 		<option>SLEX</option>
 		 	</select>
 		 	
-		 	<select class = stations>
+		 	<select class = "stations">
 		 		<option>University of the Philippines</option>
 		 	</select>
 		 	
-		 	<select class = direction>
+		 	<select class = "direction">
 		 		<option>North Bound</option>
 		 		<option>South Bound</option>
 		 	</select>
