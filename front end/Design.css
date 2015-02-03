@@ -152,3 +152,7 @@ text.mono{
 	width: 150;
 	float: left;
 }
+
+.hidden {
+	display: none;
+}

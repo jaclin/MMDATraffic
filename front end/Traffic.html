@@ -22,24 +22,59 @@
 		 		<option value = "11">November</option>
 		 		<option value = "12">December</option>
 		 		<option value = "01">January</option>
-		 		<option value = "02">February</option>
 		 		
 		 	</select>
 
-		 	<select class = "lines">
-		 		<option>EDSA</option>
-		 		<option>Commonwealth</option>
-		 		<option>Quezon Avenue</option>
-		 		<option>España</option>
-		 		<option>C5</option>
-		 		<option>Ortigas</option>
-		 		<option>Marcos Highway</option>
-		 		<option>Roxas Boulevard</option>
-		 		<option>SLEX</option>
+		 	<select class = "lines" id = "lineID">
+		 		<option value="0">EDSA</option>
+		 		<option value="1">Commonwealth</option>
+		 		<option value="2">Quezon Avenue</option>
+		 		<option value="3">España</option>
+		 		<option value="4">C5</option>
+		 		<option value="5">Ortigas</option>
+		 		<option value="6">Marcos Highway</option>
+		 		<option value="7">Roxas Boulevard</option>
+		 		<option value="8">SLEX</option>
 		 	</select>
 		 	
-		 	<select class = "stations">
-		 		<option>University of the Philippines</option>
+		 	<select class = "stations" id = "stationID">
+		 		<option value="0">Balintawak</option>
+		 		<option value="1">Kaingin Road</option>
+		 		<option value="2">Munoz</option>
+		 		<option value="3">Bansalangin</option>
+		 		<option value="4">North Ave.</option>
+		 		<option value="5">Trinoma</option>
+		 		<option value="6">Quezon Ave.</option>
+		 		<option value="7">NIA Road</option>
+		 		<option value="8">Timog</option>
+		 		<option value="9">Kamuning</option>
+		 		<option value="10">New York - Nepa Q-Mart</option>
+		 		<option value="11">Monte De Piedad</option>
+		 		<option value="12">Aurora Blvd.</option>
+		 		<option value="13">Mc Arthur - Farmers</option>
+		 		<option value="14">P. Tuazon</option>
+		 		<option value="15">Main Ave.</option>
+		 		<option value="16">Santolan</option>
+		 		<option value="17">White Plains - Connecticut</option>
+		 		<option value="18">Ortigas Ave.</option>
+		 		<option value="19"> SM Megamall</option>
+		 		<option value="20">Shaw Blvd.</option>
+		 		<option value="21">Reliance</option>
+		 		<option value="22">Pioneer - Boni</option>
+		 		<option value="23">Guadalupe</option>
+		 		<option value="24">Orense</option>
+		 		<option value="25">Kalayaan - Estrella</option>
+		 		<option value="26">Buendia</option>
+		 		<option value="27">Ayala Ave.</option>
+		 		<option value="28">Arnaiz - Pasay Road</option>
+		 		<option value="29">Magallanes</option>
+		 		<option value="30">Malibay</option>
+		 		<option value="31">Tramo</option>
+		 		<option value="32">Taft Ave.</option>
+		 		<option value="33">F.B. Harrison</option>
+		 		<option value="34">Roxas Boulevard</option>
+		 		<option value="35">Macapagal Ave.</option>
+		 		<option value="36">Mall of Asia</option>
 		 	</select>
 		 	
 		 	<select class = "direction" id = "direction">
@@ -78,6 +113,166 @@
 			<li class = "label">≥ 1.6</li>
 		</ul>
 	</div>
+	<select class = "hidden" id="EDSA" name="EDSA">
+	    <option value="0">Balintawak</option>
+ 		<option value="1">Kaingin Road</option>
+ 		<option value="2">Munoz</option>
+ 		<option value="3">Bansalangin</option>
+ 		<option value="4">North Ave.</option>
+ 		<option value="5">Trinoma</option>
+ 		<option value="6">Quezon Ave.</option>
+ 		<option value="7">NIA Road</option>
+ 		<option value="8">Timog</option>
+ 		<option value="9">Kamuning</option>
+ 		<option value="10">New York - Nepa Q-Mart</option>
+ 		<option value="11">Monte De Piedad</option>
+ 		<option value="12">Aurora Blvd.</option>
+ 		<option value="13">Mc Arthur - Farmers</option>
+ 		<option value="14">P. Tuazon</option>
+ 		<option value="15">Main Ave.</option>
+ 		<option value="16">Santolan</option>
+ 		<option value="17">White Plains - Connecticut</option>
+ 		<option value="18">Ortigas Ave.</option>
+ 		<option value="19"> SM Megamall</option>
+ 		<option value="20">Shaw Blvd.</option>
+ 		<option value="21">Reliance</option>
+ 		<option value="22">Pioneer - Boni</option>
+ 		<option value="23">Guadalupe</option>
+ 		<option value="24">Orense</option>
+ 		<option value="25">Kalayaan - Estrella</option>
+ 		<option value="26">Buendia</option>
+ 		<option value="27">Ayala Ave.</option>
+ 		<option value="28">Arnaiz - Pasay Road</option>
+ 		<option value="29">Magallanes</option>
+ 		<option value="30">Malibay</option>
+ 		<option value="31">Tramo</option>
+ 		<option value="32">Taft Ave.</option>
+ 		<option value="33">F.B. Harrison</option>
+ 		<option value="34">Roxas Boulevard</option>
+ 		<option value="35">Macapagal Ave.</option>
+ 		<option value="36">Mall of Asia</option>
+	</select>
+	<select class = "hidden" id="CW" name="CW">
+ 		<option value="0">Batasan</option>
+ 		<option value="1">St. Peter's Church</option>
+ 		<option value="2">Ever Gotesco</option>
+ 		<option value="3">Diliman Preparatory School</option>
+ 		<option value="4">Zuzuarregi</option>
+ 		<option value="5">General Malvar Hospital</option>
+ 		<option value="6">Tandang Sora Eastside</option>
+ 		<option value="7">Tandang Sora Westside</option>
+ 		<option value="8">Central Ave</option>
+ 		<option value="9">Magsaysay Ave</option>
+ 		<option value="10">University Ave</option>
+ 		<option value="11">Philcoa</option>
+	</select>
+	<select class = "hidden" id="QAVE" name="QAVE">
+ 		<option value="0">Elliptical Road</option>
+ 		<option value="1">Agham Road</option>
+ 		<option value="2">Bantayog Road</option>
+ 		<option value="3">EDSA</option>
+ 		<option value="4">SGT. Esguera</option>
+ 		<option value="5">Scout Albano</option>
+ 		<option value="6">Scout Borromeo</option>
+ 		<option value="7">Scout Santiago</option>
+ 		<option value="8">Timog</option>
+ 		<option value="9">Scout Reyes</option>
+ 		<option value="10">Scout Magbanua</option>
+ 		<option value="11">Roces Avenue</option>
+ 		<option value="12">Roosevelt Avenue</option>
+ 		<option value="13">Dr. Garcia Sr.</option>
+ 		<option value="14">Scout Chuatoco</option>
+ 		<option value="15">G. Araneta Ave.</option>
+ 		<option value="16">Sto. Domingo</option>
+ 		<option value="17">Biak na Bato</option>
+ 		<option value="18">Banawe</option>
+ 		<option value="19"> Cordillera</option>
+ 		<option value="20">D. Tuazon</option>
+ 		<option value="21">Speaker Perez</option>
+ 		<option value="22">Apo Avenue</option>
+ 		<option value="23">Kanlaon</option>
+ 		<option value="24">Mayon</option>
+	</select>
+	<select class = "hidden" id="ESP" name="ESP">
+	   <option value="0">Welcome Rotunda</option>
+ 		<option value="1">Bluementritt</option>
+ 		<option value="2">A. Maceda</option>
+ 		<option value="3">Antipolo</option>
+ 		<option value="4">Vicente Cruz</option>
+ 		<option value="5">Gov. Forbes - Lacson</option>
+ 		<option value="6">P.Noval</option>
+ 		<option value="7">Lerma</option>
+	</select>
+	<select class = "hidden" id="C5" name="C5">
+		<option value="0">Tandang Sora</option>
+ 		<option value="1">Capitol Hills</option>
+ 		<option value="2">University of the Philippines</option>
+ 		<option value="3">C.P. Garcia</option>
+ 		<option value="4">Miriam College</option>
+ 		<option value="5">Ateneo De Manila University</option>
+ 		<option value="6">Xavierville</option>
+ 		<option value="7">Aurora Boulevard</option>
+ 		<option value="8">P. Tuazon</option>
+ 		<option value="9">Bonny Serrano</option>
+ 		<option value="10">Libis Flyover</option>
+ 		<option value="11">Eastwood</option>
+ 		<option value="12">Green Meadows</option>
+ 		<option value="13">Ortigas Ave.</option>
+ 		<option value="14">J. Vargas</option>
+ 		<option value="15">Lanuza</option>
+ 		<option value="16">Bagong Ilog</option>
+ 		<option value="17">Kalayaan</option>
+ 		<option value="18">Market! Market!</option>
+	</select>
+	<select class = "hidden" id="ORT" name="ORT">
+	   	<option value="0">Santolan</option>
+ 		<option value="1">Madison</option>
+ 		<option value="2">Roosevelt</option>
+ 		<option value="3">Club Filipino</option>
+ 		<option value="4">Wilson</option>
+ 		<option value="5">Connecticut</option>
+ 		<option value="6">La Salle Greenhills</option>
+ 		<option value="7">POEA</option>
+ 		<option value="8">EDSA Shrine</option>
+ 		<option value="9">San Miguel Ave</option>
+ 		<option value="10">Meralco Ave</option>
+ 		<option value="11">Medical City</option>
+ 		<option value="12">Lanuza Ave</option>
+ 		<option value="13">Greenmeadows Ave</option>
+ 		<option value="14">C5 Flyover</option>
+	</select>
+	<select class = "hidden" id="MH" name="MH">
+	    <option value="0">SM City Marikina</option>
+	    <option value="1">LRT-2 Station</option>
+	    <option value="2">Dona Juana</option>
+	    <option value="3">Amang Rodriguez</option>
+	    <option value="4">F. Mariano Ave</option>
+ 		<option value="5">Robinson's Metro East</option>
+ 		<option value="6">San Benildo School</option>
+	</select>
+	<select class = "hidden" id="RB" name="RB">
+	   	<option value="0">Anda Circle</option>
+ 		<option value="1">Finance Road</option>
+ 		<option value="2">U.N. Avenue</option>
+ 		<option value="3">Pedro Gil</option>
+ 		<option value="4">Rajah Sulayman</option>
+ 		<option value="5">Quirino</option>
+ 		<option value="6">Pablo Ocampo</option>
+ 		<option value="7">Buendia</option>
+ 		<option value="8">Edsa Extension</option>
+ 		<option value="9">Baclaran</option>
+ 		<option value="10">Airport Road</option>
+ 		<option value="11">Coastal Road</option>
+	</select>
+	<select class = "hidden" id="SLEX" name="SLEX">
+		<option value="0">Magallanes</option>
+ 		<option value="1">Nichols</option>
+ 		<option value="2">C5 On-ramp</option>
+ 		<option value="3">Merville Exit</option>
+ 		<option value="4">Bicutan Exit</option>
+ 		<option value="5">Sucat Exit</option>
+ 		<option value="6"> Alabang Exit</option>
+	</select>
 
 	<script type="text/javascript" src="script.js"></script>
 </body>

@@ -29,7 +29,6 @@ times = ["12:00AM", "12:30AM", "1:00AM", "1:30AM", "2:00AM", "2:30AM", "3:00AM",
 
 
 function updateGraph(pos_data){
-
   data = d3.csv.parse(pos_data,
   function(d) {
     return {
@@ -56,18 +55,24 @@ function updateGraph(pos_data){
     heatMap.append("title").text(function(d) { return d.status; });
 }
 
+
+
 $('#menuBar').live('change',function(){
+
+
   var yearData = $('#Year').val();
   var monthData = $('#Month').val();
   var boundData = $('#direction').val();
+  var lineData = $('#lineID').val();
+  var stationData = $('#stationID').val();
 $.ajax({
     url: 'http://localhost:5000/',
     type: 'GET',
     data: {
       year: yearData,
       month: monthData,
-      lineID: 0,
-      stationID: 25,
+      lineID: lineData,
+      stationID: stationData,
       bound: boundData,
     }, // or $('#myform').serializeArray()
     dataType: "text",
@@ -82,4 +87,33 @@ $.ajax({
       updateGraph(newCsv);   
     }
 });
+  if ($( "#lineID option:selected").val() === "0"){
+  $("#stationID").empty().append($("#EDSA option").clone());
+}
+ if ($( "#lineID option:selected").val() === "1"){
+  $("#stationID").empty().append($("#CW option").clone());
+}
+if ($( "#lineID option:selected").val() === "2"){
+  $("#stationID").empty().append($("#QAVE option").clone());
+}
+  if ($( "#lineID option:selected").val() === "3"){
+  $("#stationID").empty().append($("#ESP option").clone());
+}
+ if ($( "#lineID option:selected").val() === "4"){
+  $("#stationID").empty().append($("#C5 option").clone());
+}
+if ($( "#lineID option:selected").val() === "5"){
+  $("#stationID").empty().append($("#ORT option").clone());
+}
+  if ($( "#lineID option:selected").val() === "6"){
+  $("#stationID").empty().append($("#MH option").clone());
+}
+ if ($( "#lineID option:selected").val() === "7"){
+  $("#stationID").empty().append($("#RB option").clone());
+}
+if ($( "#lineID option:selected").val() === "8"){
+  $("#stationID").empty().append($("#SLEX option").clone());
+} 
 });
+
+
