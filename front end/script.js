@@ -1,9 +1,16 @@
+
 $.ajax({
-    url: 'http://localhost:5000',
+    url: 'http://localhost:5000/',
     type: 'GET',
-    data: '2015/1/0/1/0', // or $('#myform').serializeArray()
+    data: {
+      year: 2015,
+      month: 1,
+      lineID: 0,
+      stationID: 25,
+      bound: 0,
+    }, // or $('#myform').serializeArray()
     dataType: "text",
-    success: function(data) { 
+    success: function(data) {
     var newCsv = data.split('\n').map(function(line) {
     var columns = line.split(','); // get the columns
     columns.splice(0, 1); // remove total column
