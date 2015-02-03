@@ -59,6 +59,7 @@ function updateGraph(pos_data){
 $('#menuBar').live('change',function(){
   var yearData = $('#Year').val();
   var monthData = $('#Month').val();
+  var boundData = $('#direction').val();
 $.ajax({
     url: 'http://localhost:5000/',
     type: 'GET',
@@ -67,7 +68,7 @@ $.ajax({
       month: monthData,
       lineID: 0,
       stationID: 25,
-      bound: 0,
+      bound: boundData,
     }, // or $('#myform').serializeArray()
     dataType: "text",
     success: function(data) {
@@ -78,7 +79,6 @@ $.ajax({
     return columns
 }).join('\n'); // join on newlines
       console.log(typeof(newCsv));
-      alert(newCsv);
       updateGraph(newCsv);   
     }
 });
